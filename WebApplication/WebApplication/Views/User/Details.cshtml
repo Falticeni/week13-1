@@ -7,7 +7,26 @@
 <h2>User details</h2>
 
 <div>
-    <h4>@Model.Id</h4>
-    <h4>@Model.Email</h4>
-    <h4>@Model.UserName</h4>
+    <table>
+        <tr>
+            <td>Id user: </td>
+            <td>@Model.Id</td>
+        </tr>
+        <tr>
+            <td>Nume:</td>
+            <td>@Model.UserName</td>
+        </tr>
+        <tr>
+            <td>Adresa Email: </td>
+            <td> @Model.Email</td>
+        </tr>
+        <tr>
+            <td>Strada: </td>
+            <td> @Model.Adresa.Street</td>
+        </tr>
+        <tr>
+            <td>Oras: </td>
+            <td> @Model.Adresa.City</td>
+        </tr>
+    </table>
 </div>

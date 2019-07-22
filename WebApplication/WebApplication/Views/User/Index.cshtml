@@ -2,9 +2,9 @@
 
 @{
     ViewBag.Title = "Users";
+    <h2>@ViewBag.Title</h2>
 }
 
-<h2>Users</h2>
 
 <div>
     <table class="table">
@@ -12,20 +12,25 @@
             <tr>
                 <td>Id</td>
                 <td>Email</td>
-                <td>UserName</td>
+                <td>First name</td>
                 <td>Details</td>
+                <td>Edit</td>
+                <td>Delete</td>
             </tr>
         </thead>
         <tbody>
             @{
                 foreach (var user in Model)
-                {   
-                        <tr>
-                            <td>@user.Id</td>
-                            <td>@user.Email</td>
-                            <td>@user.UserName</td>
-                            <td><a href="/User/Details/@user.Id">Go</a></td>
-                        </tr>
+                {
+                    <tr>
+                        <td>@user.Id</td>
+                        <td>@user.Email</td>
+                        <td>@user.UserName</td>
+
+                        <td><a href="/User/Details/@user.Id">Vezi detalii</a></td>
+                        <td><a href="/User/Edit/@user.Id">Editeaza informatii</a></td>
+                        <td><a href="/User/Delete/@user.Id">Delete user</a></td>
+                    </tr>
                 }
             }
         </tbody>
