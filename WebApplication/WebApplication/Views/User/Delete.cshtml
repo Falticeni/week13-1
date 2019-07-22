@@ -5,35 +5,38 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Delete</h2>
+<h2>Sterge utilizatorul</h2>
 
-<h3>Are you sure you want to delete this element?</h3>
+<h3>Esti sigur ca vrei sa stergi utilizatorul?</h3>
 <div>
     <h4></h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Model.UserName
+           User Id: <strong>@Model.Id</strong>
         </dt>
-                <dd>
-            @Model.Email
+        <dd>
+            <strong>Nume: </strong> @Model.UserName
         </dd>
-                <dt>
-            @Model.Adresa.Street
-        </dt>
-                <dd>
-            @Model.Adresa.City
+        <dd>
+            <strong>Adresa email: </strong>@Model.Email
+        </dd>
+        <dd>
+            <strong>Strada: </strong>@Model.Adresa.Street
+        </dd>
+        <dd>
+            <strong>Oras: </strong>@Model.Adresa.City
         </dd>
     </dl>
 
-    @using (Html.BeginForm("Delete", "User",FormMethod.Post))
+    @using (Html.BeginForm("Delete", "User", FormMethod.Post))
     {
-       
+
         <div class="form-actions no-color">
 
             @Html.HiddenFor(x => x.Id)
 
-            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <input type="submit" value="Sterge-l!" style="color:red" class="btn btn-default" /> |
 
             @Html.ActionLink("Back to List", "Index")
         </div>

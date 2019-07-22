@@ -17,6 +17,8 @@ namespace Students.Web.Models
 
         [DisplayName("Address")]
         public Address Adresa { get; set; }
+        [DisplayName("Sex")]
+        public Gender Sex { get; set; }
     }
 
     public class Address
@@ -27,4 +29,6 @@ namespace Students.Web.Models
         [DisplayName("Oras")]
         public string City { get; set; }
     }
+
+    public enum Gender {Masculin, Feminin}
 }
